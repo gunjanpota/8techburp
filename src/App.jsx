@@ -46,6 +46,8 @@ function App() {
   return (
     <>
       <RouterProvider router={routes} />
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }
