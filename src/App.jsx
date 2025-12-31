@@ -7,6 +7,8 @@ import { Industries } from './pages/Industries';
 import { Portfolio } from './pages/Portfolio';
 import { Testimonial } from './pages/Testimonial';
 import { ContactUs } from './pages/ContactUs';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const routes = createBrowserRouter([
   {
