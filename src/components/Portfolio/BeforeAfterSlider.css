@@ -1,0 +1,79 @@
+.before-after-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* Image layers */
+.image-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.image-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Before overlay */
+.before-layer {
+  overflow: hidden;
+}
+
+/* Labels */
+.label {
+  position: absolute;
+  top: 16px;
+  padding: 6px 14px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.label.after {
+  right: 16px;
+  background-color: #168cb4;
+}
+
+.label.before {
+  left: 16px;
+  background-color: #555;
+}
+
+/* Slider line */
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #fff;
+  z-index: 10;
+}
+
+/* Slider handle */
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.slider-handle span {
+  width: 2px;
+  height: 20px;
+  background-color: #168cb4;
+}

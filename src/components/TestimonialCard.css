@@ -1,0 +1,73 @@
+.testimonial-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin: 2rem 1rem;
+}
+
+/* Quote Badge */
+.quote-badge {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    background: #168CB4;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-icon {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+/* Content */
+.content {
+    margin-top: 20px;
+}
+
+.quote-text {
+    color: #555;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFB367;
+}
+
+.user-name {
+    color: #111;
+    margin: 0;
+    font-weight: 600;
+}
+
+.user-designation {
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .quote-text {
+        font-size: 16px;
+    }
+}

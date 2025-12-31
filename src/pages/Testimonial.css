@@ -1,0 +1,218 @@
+/* App.css - simple, responsive styles */
+:root {
+    --accent1: #168CB4;
+    --accent2: #FFB367;
+    --text: #333;
+    --muted: #696969;
+    --card-bg: #fff;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.app-root {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f7fafc 0%, #fff 50%);
+    color: var(--text)
+}
+
+/* Parallax background */
+.parallax-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    background: linear-gradient(180deg, rgba(22, 140, 180, 0.05), rgba(255, 179, 103, 0.04));
+}
+
+/* about-Hero */
+.testimonials-hero {
+    margin-top: 81px;
+    padding: 64px 16px 32px;
+    text-align: center
+}
+
+.testimonials-hero-inner {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.testimonials-hero h1 {
+    font-size: 2rem;
+    margin: 0 0 8px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
+.testimonials-hero p {
+    color: var(--muted);
+    margin: 0
+}
+
+/* Clients */
+.clients-section {
+    padding: 24px 16px
+}
+
+/* Testimonials / carousel */
+.testimonials-section {
+    padding: 40px 16px
+}
+
+.carousel-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    padding: 16px
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-left {
+    left: 12px
+}
+
+.arrow-right {
+    right: 12px
+}
+
+.arrow svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent1)
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all .25s
+}
+
+.dot.active {
+    width: 28px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2))
+}
+
+/* Blogs section */
+.blogs-section {
+    padding: 40px 16px;
+    background: transparent
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 24px
+}
+
+.section-head h2 {
+    font-size: 1.45rem;
+    margin: 0 0 8px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    color: transparent
+}
+
+.section-head p {
+    color: var(--muted);
+    margin: 0
+}
+
+/* Grid */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px
+}
+
+@media(min-width:700px) {
+
+    .blogs-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(min-width:1000px) {
+    .blogs-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+.load-more-wrap {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.load-more-wrap:hover {
+    transition: 0.3s ease;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed
+}
+
+/* Utilities */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.spin {
+    animation: spin 1s linear infinite
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}

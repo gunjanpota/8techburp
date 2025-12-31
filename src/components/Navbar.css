@@ -1,0 +1,286 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 8px 40px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* .navbar-scrolled {
+    background: white;
+} */
+
+.logo-container {
+    width: 280px;
+}
+
+.logo {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo2 {
+    width: 200px;
+    height: auto;
+    margin: 4px 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo2:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* NAV LINKS (desktop default) */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links .link {
+    margin: 0 12px;
+    cursor: pointer;
+    position: relative;
+    color: #168CB4;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.4s all;
+    text-decoration: none;
+}
+
+.nav-links .link:hover {
+    color: #FFB376;
+}
+
+.navbar-scrolled .nav-links .link {
+    color: black;
+}
+
+/* .navbar-scrolled .nav-links .link:hover {
+    color: #168CB4;
+} */
+
+.nav-links .link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: gold;
+    transition: 0.4s all;
+}
+
+.nav-links .link:hover::after {
+    width: 100%;
+}
+
+.link-active {
+    margin: 0 12px;
+    cursor: pointer;
+    position: relative;
+    color: #168CB4;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-active:hover {
+    color: #FFB376;
+}
+
+/* .navbar-scrolled .link-active {
+    color: black;
+} */
+
+/* .navbar-scrolled .link-active:hover {
+    color: #168CB4;
+} */
+
+.link-active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: gold;
+    transition: 0.4s all;
+}
+
+/* BUTTONS (unchanged, if used somewhere else) */
+.btn-red {
+    background-color: crimson;
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    border: 2px solid crimson;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.btn-red:hover {
+    background-color: transparent;
+    color: crimson;
+    border-radius: 8px;
+    border: 2px solid crimson;
+}
+
+.btn-red-disable {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #966670;
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    border: 2px solid #966670;
+    font-size: 16px;
+    transition: 0.3s all;
+    opacity: 0.65;
+}
+
+.btn-blue {
+    background-color: gold;
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 2px solid gold;
+}
+
+.btn-blue:hover {
+    background-color: transparent;
+    color: gold;
+    border-radius: 8px;
+    border: 2px solid gold;
+}
+
+.btn-blue-disable {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #b89d40;
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    border: 2px solid #b89d40;
+    font-size: 16px;
+    transition: 0.3s all;
+    opacity: 0.65;
+}
+
+.sun-moon-icon {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+/* ============= HAMBURGER BUTTON ============= */
+
+.nav-toggle {
+    display: none;
+    /* hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.nav-toggle-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ============= MOBILE STYLES ============= */
+
+@media (max-width: 1015px) {
+    .navbar {
+        padding: 8px 16px;
+    }
+
+    .logo-container {
+        width: auto;
+        flex: 1;
+    }
+
+    /* show hamburger on mobile */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* turn nav links into dropdown */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        background-color: #ffffff;
+        /* background: linear-gradient(200deg, #168CB4, #FFB376); */
+        /* blue → orange */
+        padding: 0 16px;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.nav-open {
+        max-height: 500px;
+        padding: 20px 0;
+        /* padding-bottom: 16px; */
+        align-items: center;
+        line-height: 50px;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.nav-close {
+        line-height: 50px;
+        align-items: center;
+        transition: 0.3s ease;
+
+    }
+
+    .nav-links .link,
+    .nav-links .link-active {
+        margin: 8px 0;
+        font-size: 16px;
+        color: black;
+    }
+}
+
+/* DESKTOP RESET (just for clarity) */
+@media (min-width: 1016px) {
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        max-height: none;
+        padding: 0;
+        box-shadow: none;
+        border-bottom: none;
+    }
+}

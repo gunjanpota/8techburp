@@ -1,0 +1,103 @@
+.industry-section {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+.industry-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.industry-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.industry-header h2 {
+  font-size: 2.5rem;
+  color: #168cb4;
+  margin-bottom: 16px;
+}
+
+.industry-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 640px;
+  margin: auto;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.industry-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.industry-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.industry-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.industry-desc {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.industry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.industry-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.industry-link {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.industry-link a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.industry-link a:hover {
+  text-decoration: underline;
+}

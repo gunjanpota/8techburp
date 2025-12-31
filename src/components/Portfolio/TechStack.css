@@ -1,0 +1,78 @@
+.techstack {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 140, 180, 0.05),
+    rgba(255, 179, 103, 0.05)
+  );
+}
+
+.techstack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.techstack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.techstack-header h2 {
+  font-size: 2.5rem;
+  color: #168cb4;
+  margin-bottom: 1rem;
+}
+
+.techstack-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tech Pills */
+.techstack-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tech-item {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tech-item:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: #168cb4;
+}
+
+.tech-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Category Tooltip */
+.tech-category {
+  position: absolute;
+  bottom: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: #ffb367;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.tech-item:hover .tech-category {
+  opacity: 1;
+}
