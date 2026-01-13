@@ -22,7 +22,7 @@ export function ContactUs() {
         toast.success('Thank you! Your message has been sent successfully.');
         setFormData({ name: '', mobile: '', email: '', message: '' });
 
-        const url = "https://script.google.com/macros/s/AKfycby91Le7XaDjWVeNJ2NQXkEKHO0wO-ogDLdVYab_SZ1doouCMxoNjrmBNU62ITj9_lYzGQ/exec";
+        const url = "https://script.google.com/macros/s/AKfycbyI7HxNjwieVQXleTQUKHQXb-W5d_NeiUu314ueQEzYmh8jTNvYYCXePysUYo8obWj54A/exec";
         fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
